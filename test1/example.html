@@ -332,7 +332,6 @@ Shiny.addCustomMessageHandler('shinyjs-refresh', function(params) { shinyjs.debu
 </div>
 </div>
 <p><br></p>
-<p>You need to insert next buttons with <code>sd_next()</code> and set the <code>next_page</code> argument to the name of the page you want to go to next.</p>
 <div class="cell">
 <div class="cell-output-display">
 <button id="next-page2" type="button" class="btn btn-default action-button" style="display: block; margin: auto;" onclick="Shiny.setInputValue('next_page', 'page2');">Next</button>
@@ -726,6 +725,602 @@ Shiny.addCustomMessageHandler('shinyjs-refresh', function(params) { shinyjs.debu
 <p><br></p>
 <div class="cell">
 <div class="cell-output-display">
+<button id="next-page4" type="button" class="btn btn-default action-button" style="display: block; margin: auto;" onclick="Shiny.setInputValue('next_page', 'page4');">Next</button>
+</div>
+</div>
+</section>
+</div>
+<div id="page4" class="sd-page">
+<section id="below-are-a-few-questions-about-electric-vehicles-which-we-will-only-use-for-analyzing-our-survey-data." class="level2">
+<h2 class="anchored" data-anchor-id="below-are-a-few-questions-about-electric-vehicles-which-we-will-only-use-for-analyzing-our-survey-data.">Below are a few questions about electric vehicles which we will only use for analyzing our survey data.</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div id="container- run_on_gasoline" data-question-id="run_on_gasoline" data-required="false" class="question-container">
+<div id="run_on_gasoline" style="width:100%;" class="form-group shiny-input-checkboxgroup shiny-input-container" role="group" aria-labelledby="run_on_gasoline-label">
+<label class="control-label" id="run_on_gasoline-label" for="run_on_gasoline"><p>Please select which vehicle(s) can run on gasoline: (select all that apply)</p>
+</label>
+<div class="shiny-options-group">
+<div class="checkbox">
+<label>
+<input type="checkbox" name="run_on_gasoline" value="Hybrid_EV">
+<span>Hybrid Electric Vehicle</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="run_on_gasoline" value="Plug_Hybrid_in_EV">
+<span>Plug-in Hybrid Electric Vehicle</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="run_on_gasoline" value="EV">
+<span>Pure Electric Vehicle</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="run_on_gasoline" value="not_sure">
+<span>I’m not sure</span>
+</label>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell-output-display">
+<div id="container- plugged_in" data-question-id="plugged_in" data-required="false" class="question-container">
+<div id="plugged_in" style="width:100%;" class="form-group shiny-input-checkboxgroup shiny-input-container" role="group" aria-labelledby="plugged_in-label">
+<label class="control-label" id="plugged_in-label" for="plugged_in"><p>Please select which vehicles can be plugged-in: (Select all that apply)</p>
+</label>
+<div class="shiny-options-group">
+<div class="checkbox">
+<label>
+<input type="checkbox" name="plugged_in" value="Hybrid_EV">
+<span>Hybrid Electric Vehicle</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="plugged_in" value="Plug_Hybrid_in_EV">
+<span>Plug-in Hybrid Electric Vehicle</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="plugged_in" value="EV">
+<span>Pure Electric Vehicle</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="plugged_in" value="not_sure">
+<span>I’m not sure</span>
+</label>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell-output-display no-overflow-x">
+<div id="container- know_electric_vehicle" data-question-id="know_electric_vehicle" data-required="false" class="question-container">
+<div class="form-group shiny-input-container" style="width:100%;">
+<label class="control-label" id="know_electric_vehicle-label" for="know_electric_vehicle"><p>Do you know the name of a pure electric vehicle?</p>
+</label>
+<div>
+<select id="know_electric_vehicle" class="shiny-input-select"><option value="">Choose an option...</option>
+<option value="Yes">Yes</option>
+<option value="No">No</option></select>
+<script type="application/json" data-for="know_electric_vehicle">{"plugins":["selectize-plugin-a11y"]}</script>
+</div>
+</div>
+</div>
+</div>
+<div class="cell-output-display">
+<div id="container- write_electric_name" data-question-id="write_electric_name" data-required="false" class="question-container">
+<div class="form-group shiny-input-container" style="width:100%;">
+<label class="control-label" id="write_electric_name-label" for="write_electric_name"><p>Write the name</p>
+</label>
+<input id="write_electric_name" type="text" class="shiny-input-text form-control" value="">
+</div>
+</div>
+</div>
+<div class="cell-output-display no-overflow-x">
+<div id="container- max_subsidy" data-question-id="max_subsidy" data-required="false" class="question-container">
+<div class="form-group shiny-input-container" style="width:100%;">
+<label class="control-label" id="max_subsidy-label" for="max_subsidy"><p>Do you know the current maximum subsidy available from the US federal government for purchasing an electric vehicle?</p>
+</label>
+<div>
+<select id="max_subsidy" class="shiny-input-select"><option value="">Choose an option...</option>
+<option value="$1,000">$1,000</option>
+<option value="$2,500">$2,500</option>
+<option value="$5,000">$5,000</option>
+<option value="$7,500">$7,500</option>
+<option value="$10,000">$10,000</option>
+<option value="I'm not sure">I'm not sure</option></select>
+<script type="application/json" data-for="max_subsidy">{"plugins":["selectize-plugin-a11y"]}</script>
+</div>
+</div>
+</div>
+</div>
+<div class="cell-output-display">
+<div id="container- next_car_budget_range" data-question-id="next_car_budget_range" data-required="false" class="question-container">
+<div id="next_car_budget_range" style="width:100%;" class="form-group shiny-input-checkboxgroup shiny-input-container" role="group" aria-labelledby="next_car_budget_range-label">
+<label class="control-label" id="next_car_budget_range-label" for="next_car_budget_range"><p>What is your budget range for this next vehicle purchase (select ALL that apply)?</p>
+</label>
+<div class="shiny-options-group">
+<div class="checkbox">
+<label>
+<input type="checkbox" name="next_car_budget_range" value="4999">
+<span>$4,999 or less</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="next_car_budget_range" value="9999">
+<span>$5,000 - $9,999</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="next_car_budget_range" value="14999">
+<span>$10,000 - $14,999</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="next_car_budget_range" value="19999">
+<span>$15,000 - $19,999</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="next_car_budget_range" value="24999">
+<span>$20,000 - $24,999</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="next_car_budget_range" value="29999">
+<span>$25,000 - $29,999</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="next_car_budget_range" value="34999">
+<span>$30,000 - $34,999</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="next_car_budget_range" value="39999">
+<span>$35,000 - $39,999</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="next_car_budget_range" value="44999">
+<span>$40,000 - $44,999</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="next_car_budget_range" value="49999">
+<span>$45,000 - $49,999</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="next_car_budget_range" value="59999">
+<span>$50,000 - $59,999</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="next_car_budget_range" value="69999">
+<span>$60,000 - $69,999</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="next_car_budget_range" value="79999">
+<span>$70,000 - $79,999</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="next_car_budget_range" value="89999">
+<span>$80,000 - $89,999</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="next_car_budget_range" value="99999">
+<span>$90,000 - $99,999</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="next_car_budget_range" value="100000">
+<span>100,000 or more</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="next_car_budget_range" value="not_sure">
+<span>I'm not sure</span>
+</label>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell-output-display no-overflow-x">
+<div id="container- next_car_down_payment" data-question-id="next_car_down_payment" data-required="false" class="question-container">
+<div class="form-group shiny-input-container" style="width:100%;">
+<label class="control-label" id="next_car_down_payment-label" for="next_car_down_payment"><p>What will be your down payment for your next car?</p>
+</label>
+<div>
+<select id="next_car_down_payment" class="shiny-input-select"><option value="">Choose an option...</option>
+<option value="999">$0 - $999</option>
+<option value="1,999">$1,000 - $1,999</option>
+<option value="2,999">$2,000 - $2,999</option>
+<option value="3,999">$3,000 - $3,999</option>
+<option value="4,999">$4,000 - $4,999</option>
+<option value="5,999">$5,000 - $5,999</option>
+<option value="6,999">$6,000 - $6,999</option>
+<option value="7,999">$7,000 - $7,999</option>
+<option value="8,999">$8,000 - $8,999</option>
+<option value="9,999">$9,000 - $9,999</option>
+<option value="10,999">$10,000 - $10,999</option>
+<option value="11,999">$11,000 - $11,999</option>
+<option value="12,999">$12,000 - $12,999</option>
+<option value="13,999">$13,000 - $13,999</option>
+<option value="14,999">$14,000 - $14,999</option>
+<option value="15,999">$15,000 - $15,999</option>
+<option value="16,999">$16,000 - $16,999</option>
+<option value="17,999">$17,000 - $17,999</option>
+<option value="18,999">$18,000 - $18,999</option>
+<option value="19,999">$19,000 - $19,999</option>
+<option value="20,000">20,000 or more</option>
+<option value="not_sure">I'm not sure</option></select>
+<script type="application/json" data-for="next_car_down_payment">{"plugins":["selectize-plugin-a11y"]}</script>
+</div>
+</div>
+</div>
+</div>
+<div class="cell-output-display no-overflow-x">
+<div id="container- plan_lease_buy" data-question-id="plan_lease_buy" data-required="false" class="question-container">
+<div class="form-group shiny-input-container" style="width:100%;">
+<label class="control-label" id="plan_lease_buy-label" for="plan_lease_buy"><p>Would you consider a Plug-in Hybrid Electric or an all-electric vehicle as your next vehicle?</p>
+</label>
+<div>
+<select id="plan_lease_buy" class="shiny-input-select"><option value="">Choose an option...</option>
+<option value="Definitely_Not">Definitely Not</option>
+<option value="Probably_Not">Probably Not</option>
+<option value="Maybe_Not_sure">Maybe/ Not sure</option>
+<option value="Probably_Yes">Probably Yes</option>
+<option value="Definitely_Yes">Definitely Yes</option></select>
+<script type="application/json" data-for="plan_lease_buy">{"plugins":["selectize-plugin-a11y"]}</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><br></p>
+<div class="cell">
+<div class="cell-output-display">
+<button id="next-page5" type="button" class="btn btn-default action-button" style="display: block; margin: auto;" onclick="Shiny.setInputValue('next_page', 'page5');">Next</button>
+</div>
+</div>
+</section>
+</div>
+<div id="page5" class="sd-page">
+<section id="conjoint-questions" class="level2">
+<h2 class="anchored" data-anchor-id="conjoint-questions">Conjoint Questions</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div id="container- silly_paragraph" data-question-id="silly_paragraph" data-required="false" class="question-container">
+<div class="form-group shiny-input-container" style="width: 100%;">
+<label class="control-label" id="silly_paragraph-label" for="silly_paragraph"><p>This is a test question</p>
+</label>
+<textarea id="silly_paragraph" class="shiny-input-textarea form-control" style="width:100%;height:100px;" rows="6" cols="80"></textarea>
+</div>
+</div>
+</div>
+</div>
+<p><br></p>
+<div class="cell">
+<div class="cell-output-display">
+<button id="next-page6" type="button" class="btn btn-default action-button" style="display: block; margin: auto;" onclick="Shiny.setInputValue('next_page', 'page6');">Next</button>
+</div>
+</div>
+</section>
+</div>
+<div id="page6" class="sd-page">
+<section id="were-almost-done-wed-just-like-to-ask-just-a-few-more-questions-about-you-which-we-will-only-use-for-analyzing-our-survey-data." class="level2">
+<h2 class="anchored" data-anchor-id="were-almost-done-wed-just-like-to-ask-just-a-few-more-questions-about-you-which-we-will-only-use-for-analyzing-our-survey-data.">We’re almost done! We’d just like to ask just a few more questions about you which we will only use for analyzing our survey data.</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div id="container- age" data-question-id="age" data-required="false" class="question-container">
+<div class="form-group shiny-input-container" style="width:100%;">
+<label class="control-label" id="age-label" for="age"><p>What’s your age?</p>
+</label>
+<input id="age" type="number" class="shiny-input-number form-control">
+</div>
+</div>
+</div>
+<div class="cell-output-display no-overflow-x">
+<div id="container- gender" data-question-id="gender" data-required="false" class="question-container">
+<div class="form-group shiny-input-container" style="width:100%;">
+<label class="control-label" id="gender-label" for="gender"><p>What is your gender?</p>
+</label>
+<div>
+<select id="gender" class="shiny-input-select"><option value="">Choose an option...</option>
+<option value="Female">Female</option>
+<option value="Male">Male</option>
+<option value="Non_Binary">Non Binary</option>
+<option value="Transgender">Transgender</option>
+<option value="Gender_Nonconforming">Gender Nonconforming</option>
+<option value="Other:">Other:</option>
+<option value="Prefer_not_to_answer">Prefer not to answer</option></select>
+<script type="application/json" data-for="gender">{"plugins":["selectize-plugin-a11y"]}</script>
+</div>
+</div>
+</div>
+</div>
+<div class="cell-output-display no-overflow-x">
+<div id="container- hispanic" data-question-id="hispanic" data-required="false" class="question-container">
+<div class="form-group shiny-input-container" style="width:100%;">
+<label class="control-label" id="hispanic-label" for="hispanic"><p>Are you of Hispanic, Latino or Spanish origin?</p>
+</label>
+<div>
+<select id="hispanic" class="shiny-input-select"><option value="">Choose an option...</option>
+<option value="Yes">Yes</option>
+<option value="No">No</option></select>
+<script type="application/json" data-for="hispanic">{"plugins":["selectize-plugin-a11y"]}</script>
+</div>
+</div>
+</div>
+</div>
+<div class="cell-output-display">
+<div id="container- ethnicity" data-question-id="ethnicity" data-required="false" class="question-container">
+<div id="ethnicity" style="width:100%;" class="form-group shiny-input-checkboxgroup shiny-input-container" role="group" aria-labelledby="ethnicity-label">
+<label class="control-label" id="ethnicity-label" for="ethnicity"><p>Which race/ethnicity best describes you? :(choose all that apply):</p>
+</label>
+<div class="shiny-options-group">
+<div class="checkbox">
+<label>
+<input type="checkbox" name="ethnicity" value="native_american">
+<span>American Indian or Alaskan Native</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="ethnicity" value="asian">
+<span>Asian</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="ethnicity" value="African_American">
+<span>Black or African American</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="ethnicity" value="MENA">
+<span>Middle Eastern and North African (MENA)</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="ethnicity" value="Pacific_islander">
+<span>Native Hawaiian or Other Pacific Islander</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="ethnicity" value="white">
+<span>White</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="ethnicity" value="some_other_race">
+<span>some other race</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="ethnicity" value="no_answer">
+<span>Do not know/prefer not to answer</span>
+</label>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell-output-display no-overflow-x">
+<div id="container- people_household" data-question-id="people_household" data-required="false" class="question-container">
+<div class="form-group shiny-input-container" style="width:100%;">
+<label class="control-label" id="people_household-label" for="people_household"><p>How many people, in total, live in your household?</p>
+</label>
+<div>
+<select id="people_household" class="shiny-input-select"><option value="">Choose an option...</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="more_than_5">More than 5</option></select>
+<script type="application/json" data-for="people_household">{"plugins":["selectize-plugin-a11y"]}</script>
+</div>
+</div>
+</div>
+</div>
+<div class="cell-output-display no-overflow-x">
+<div id="container- current_employment_status" data-question-id="current_employment_status" data-required="false" class="question-container">
+<div class="form-group shiny-input-container" style="width:100%;">
+<label class="control-label" id="current_employment_status-label" for="current_employment_status"><p>Which of the following categories best describes your current employment status?</p>
+</label>
+<div>
+<select id="current_employment_status" class="shiny-input-select"><option value="">Choose an option...</option>
+<option value="full_time_student">I am a full-time student.</option>
+<option value="part_time">Employed, working 1-39 hours per week.</option>
+<option value="full_time">Employed, working 40 or more hours per week.</option>
+<option value="looking_for_work">Not employed, looking for work.</option>
+<option value="not_looking_for_work">Not employed, NOT looking for work.</option>
+<option value="Retired">Retired.</option>
+<option value="disabled">Disabled, not able to work.</option>
+<option value="no_answer">Prefer not to answer</option></select>
+<script type="application/json" data-for="current_employment_status">{"plugins":["selectize-plugin-a11y"]}</script>
+</div>
+</div>
+</div>
+</div>
+<div class="cell-output-display no-overflow-x">
+<div id="container- total_household_income" data-question-id="total_household_income" data-required="false" class="question-container">
+<div class="form-group shiny-input-container" style="width:100%;">
+<label class="control-label" id="total_household_income-label" for="total_household_income"><p>Which of the following categories best represents your total household income?</p>
+</label>
+<div>
+<select id="total_household_income" class="shiny-input-select"><option value="">Choose an option...</option>
+<option value="15000">Less than $15,000</option>
+<option value="30000">$15,000 to less than $30,000</option>
+<option value="40000">$30,000 to less than $40,000</option>
+<option value="50000">$40,000 to less than $50,000</option>
+<option value="60000">$50,000 to less than $60,000</option>
+<option value="75000">$60,000 to less than $75,000</option>
+<option value="100000">$75,000 to less than $100,000.</option>
+<option value="125000">$100,000 to less than $125,000</option>
+<option value="150000">$125,000 to less than $150,000</option>
+<option value="175000">$150,000 to less than $175,000</option>
+<option value="200000">$175,000 to less than $200,000</option>
+<option value="250000">$200,000 to less than $250,000</option>
+<option value="more_than_250000">$250,000 or more</option>
+<option value="no_answer">Prefer not to answer</option></select>
+<script type="application/json" data-for="total_household_income">{"plugins":["selectize-plugin-a11y"]}</script>
+</div>
+</div>
+</div>
+</div>
+<div class="cell-output-display no-overflow-x">
+<div id="container- educational_qualification" data-question-id="educational_qualification" data-required="false" class="question-container">
+<div class="form-group shiny-input-container" style="width:100%;">
+<label class="control-label" id="educational_qualification-label" for="educational_qualification"><p>What is the last grade or level of school you have completed? If currently enrolled, please use the highest degree received.</p>
+</label>
+<div>
+<select id="educational_qualification" class="shiny-input-select"><option value="">Choose an option...</option>
+<option value="0">Less than a high school diploma</option>
+<option value="1">High school degree or equivalent (e.g. GED)</option>
+<option value="2">Some college - but less than two years of college</option>
+<option value="3">Some college - two years or more/A.A. degree</option>
+<option value="4">Technical or trade school</option>
+<option value="5">College graduate/bachelor's degree/B.A./B.S.</option>
+<option value="6">Postgraduate courses</option>
+<option value="7">Master's degree</option>
+<option value="8">M.B.A. or law degree</option>
+<option value="9">Ph.D. or M.D</option>
+<option value="10">Prefer not to answer</option></select>
+<script type="application/json" data-for="educational_qualification">{"plugins":["selectize-plugin-a11y"]}</script>
+</div>
+</div>
+</div>
+</div>
+<div class="cell-output-display no-overflow-x">
+<div id="container- current_housing" data-question-id="current_housing" data-required="false" class="question-container">
+<div class="form-group shiny-input-container" style="width:100%;">
+<label class="control-label" id="current_housing-label" for="current_housing"><p>In which type of housing do you currently live?</p>
+</label>
+<div>
+<select id="current_housing" class="shiny-input-select"><option value="">Choose an option...</option>
+<option value="0">Single family house not attached to any other house</option>
+<option value="1">Single family house attached to one or more houses (townhouse, rowhome, condo, duplex, triplex, etc.)</option>
+<option value="2">A mobile home or trailer</option>
+<option value="3">Building with 2-4 apartments/condos/studios</option>
+<option value="4">Building with 5-19 apartments/condos/studios</option>
+<option value="5">Building with 20 or more apartments/condos/studios</option>
+<option value="6">Boat, RV, van, etc.</option>
+<option value="7">Other:</option></select>
+<script type="application/json" data-for="current_housing">{"plugins":["selectize-plugin-a11y"]}</script>
+</div>
+</div>
+</div>
+</div>
+<div class="cell-output-display no-overflow-x">
+<div id="container- own_or_rent" data-question-id="own_or_rent" data-required="false" class="question-container">
+<div class="form-group shiny-input-container" style="width:100%;">
+<label class="control-label" id="own_or_rent-label" for="own_or_rent"><p>Do you own or rent the current place you are living in?</p>
+</label>
+<div>
+<select id="own_or_rent" class="shiny-input-select"><option value="">Choose an option...</option>
+<option value="0">Own</option>
+<option value="1">Rent</option>
+<option value="2">Neither</option>
+<option value="3">Do not know/prefer not to know</option></select>
+<script type="application/json" data-for="own_or_rent">{"plugins":["selectize-plugin-a11y"]}</script>
+</div>
+</div>
+</div>
+</div>
+<div class="cell-output-display no-overflow-x">
+<div id="container- electric_bill" data-question-id="electric_bill" data-required="false" class="question-container">
+<div class="form-group shiny-input-container" style="width:100%;">
+<label class="control-label" id="electric_bill-label" for="electric_bill"><p>What is your monthly electricity bill on an average?</p>
+</label>
+<div>
+<select id="electric_bill" class="shiny-input-select"><option value="">Choose an option...</option>
+<option value="0">$0 - $99</option>
+<option value="1">$100 - $199</option>
+<option value="2">$200 - $299</option>
+<option value="3">$300 - $399</option>
+<option value="4">$400 - $499</option>
+<option value="5">$500 or more</option></select>
+<script type="application/json" data-for="electric_bill">{"plugins":["selectize-plugin-a11y"]}</script>
+</div>
+</div>
+</div>
+</div>
+<div class="cell-output-display no-overflow-x">
+<div id="container- political_views" data-question-id="political_views" data-required="false" class="question-container">
+<div class="form-group shiny-input-container" style="width:100%;">
+<label class="control-label" id="political_views-label" for="political_views"><p>How would you describe your political views?</p>
+</label>
+<div>
+<select id="political_views" class="shiny-input-select"><option value="">Choose an option...</option>
+<option value="0">Very conservative</option>
+<option value="1">Conservative</option>
+<option value="2">Moderate</option>
+<option value="3">Liberal</option>
+<option value="4">Very liberal</option>
+<option value="5">Prefer not to say</option>
+<option value="6">Other:</option></select>
+<script type="application/json" data-for="political_views">{"plugins":["selectize-plugin-a11y"]}</script>
+</div>
+</div>
+</div>
+</div>
+<div class="cell-output-display no-overflow-x">
+<div id="container- party_voting" data-question-id="party_voting" data-required="false" class="question-container">
+<div class="form-group shiny-input-container" style="width:100%;">
+<label class="control-label" id="party_voting-label" for="party_voting"><p>Which political party do you typically vote for?</p>
+</label>
+<div>
+<select id="party_voting" class="shiny-input-select"><option value="">Choose an option...</option>
+<option value="0">Democratic</option>
+<option value="1">Republican</option>
+<option value="2">I am independent</option>
+<option value="3">Prefer not to say</option></select>
+<script type="application/json" data-for="party_voting">{"plugins":["selectize-plugin-a11y"]}</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><br></p>
+<div class="cell">
+<div class="cell-output-display">
 <button id="next-end" type="button" class="btn btn-default action-button" style="display: block; margin: auto;" onclick="Shiny.setInputValue('next_page', 'end');">Next</button>
 </div>
 </div>
@@ -820,7 +1415,7 @@ ojs_define <- function(..., .session = shiny::getDefaultReactiveDomain()) {
 </p>
 <!--html_preserve-->
 <script type="application/shiny-prerendered" data-context="dependencies">
-{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]}]}
+{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]}]}
 </script>
 <!--/html_preserve-->
 <!--html_preserve-->

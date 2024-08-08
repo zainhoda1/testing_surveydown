@@ -1,0 +1,26 @@
+{
+    "id": "8E54A9CB",
+    "path": "D:/Github/testing_surveydown/test1/example.qmd",
+    "project_path": "test1/example.qmd",
+    "type": "quarto_markdown",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1723141637009.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "600,0",
+        "scrollLine": "593"
+    },
+    "folds": "36|6|183|0|\n201|6|275|0|\n291|6|422|0|\n437|6|570|0|\n605|6|804|0|\n822|6|862|0|\n",
+    "lastKnownWriteTime": 1723152660,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1723152660117,
+    "read_only": false,
+    "read_only_alternatives": []
+}
