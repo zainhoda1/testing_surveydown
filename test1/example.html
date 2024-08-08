@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>example</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="example_files/libs/clipboard/clipboard.min.js"></script>
+<script src="example_files/libs/quarto-html/quarto.js"></script>
+<script src="example_files/libs/quarto-html/popper.min.js"></script>
+<script src="example_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="example_files/libs/quarto-html/anchor.min.js"></script>
+<link href="example_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="example_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="example_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="example_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="example_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="example_files/libs/quarto-contrib/hidepagesjs/hide_pages.js"></script>
+<script src="example_files/libs/quarto-contrib/updateprogressjs/update_progress.js"></script>
+<link href="example_files/libs/quarto-contrib/surveydowncss/surveydown.css" rel="stylesheet">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+
+
+  <style>
+  #progressbar.top {
+    top: 0;
+  }
+  body {
+    background-color: #f2f6f9;
+  }
+  </style>
+  
+  <div id="progressbar" class="top">
+    <div id="progress" style="background-color: #2780E3;"></div>
+  </div>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,800;1,400;1,800&amp;display=swap" rel="stylesheet">
+  <style>
+  body, .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif;
+  }
+  </style>
+  
+<div class="cell" data-context="setup">
+<div class="cell-output-display">
+<!--SHINY.SINGLETON[223eed69850a44625b94f39193177e317dbc7f92]-->
+<script>Shiny.addCustomMessageHandler('shinyjs-show', function(params) { shinyjs.debugMessage('shinyjs: calling function "show" with parameters:'); shinyjs.debugMessage(params); shinyjs.show(params);});
+Shiny.addCustomMessageHandler('shinyjs-hide', function(params) { shinyjs.debugMessage('shinyjs: calling function "hide" with parameters:'); shinyjs.debugMessage(params); shinyjs.hide(params);});
+Shiny.addCustomMessageHandler('shinyjs-toggle', function(params) { shinyjs.debugMessage('shinyjs: calling function "toggle" with parameters:'); shinyjs.debugMessage(params); shinyjs.toggle(params);});
+Shiny.addCustomMessageHandler('shinyjs-enable', function(params) { shinyjs.debugMessage('shinyjs: calling function "enable" with parameters:'); shinyjs.debugMessage(params); shinyjs.enable(params);});
+Shiny.addCustomMessageHandler('shinyjs-disable', function(params) { shinyjs.debugMessage('shinyjs: calling function "disable" with parameters:'); shinyjs.debugMessage(params); shinyjs.disable(params);});
+Shiny.addCustomMessageHandler('shinyjs-toggleState', function(params) { shinyjs.debugMessage('shinyjs: calling function "toggleState" with parameters:'); shinyjs.debugMessage(params); shinyjs.toggleState(params);});
+Shiny.addCustomMessageHandler('shinyjs-addClass', function(params) { shinyjs.debugMessage('shinyjs: calling function "addClass" with parameters:'); shinyjs.debugMessage(params); shinyjs.addClass(params);});
+Shiny.addCustomMessageHandler('shinyjs-removeClass', function(params) { shinyjs.debugMessage('shinyjs: calling function "removeClass" with parameters:'); shinyjs.debugMessage(params); shinyjs.removeClass(params);});
+Shiny.addCustomMessageHandler('shinyjs-toggleClass', function(params) { shinyjs.debugMessage('shinyjs: calling function "toggleClass" with parameters:'); shinyjs.debugMessage(params); shinyjs.toggleClass(params);});
+Shiny.addCustomMessageHandler('shinyjs-html', function(params) { shinyjs.debugMessage('shinyjs: calling function "html" with parameters:'); shinyjs.debugMessage(params); shinyjs.html(params);});
+Shiny.addCustomMessageHandler('shinyjs-onevent', function(params) { shinyjs.debugMessage('shinyjs: calling function "onevent" with parameters:'); shinyjs.debugMessage(params); shinyjs.onevent(params);});
+Shiny.addCustomMessageHandler('shinyjs-removeEvent', function(params) { shinyjs.debugMessage('shinyjs: calling function "removeEvent" with parameters:'); shinyjs.debugMessage(params); shinyjs.removeEvent(params);});
+Shiny.addCustomMessageHandler('shinyjs-alert', function(params) { shinyjs.debugMessage('shinyjs: calling function "alert" with parameters:'); shinyjs.debugMessage(params); shinyjs.alert(params);});
+Shiny.addCustomMessageHandler('shinyjs-logjs', function(params) { shinyjs.debugMessage('shinyjs: calling function "logjs" with parameters:'); shinyjs.debugMessage(params); shinyjs.logjs(params);});
+Shiny.addCustomMessageHandler('shinyjs-runjs', function(params) { shinyjs.debugMessage('shinyjs: calling function "runjs" with parameters:'); shinyjs.debugMessage(params); shinyjs.runjs(params);});
+Shiny.addCustomMessageHandler('shinyjs-reset', function(params) { shinyjs.debugMessage('shinyjs: calling function "reset" with parameters:'); shinyjs.debugMessage(params); shinyjs.reset(params);});
+Shiny.addCustomMessageHandler('shinyjs-delay', function(params) { shinyjs.debugMessage('shinyjs: calling function "delay" with parameters:'); shinyjs.debugMessage(params); shinyjs.delay(params);});
+Shiny.addCustomMessageHandler('shinyjs-click', function(params) { shinyjs.debugMessage('shinyjs: calling function "click" with parameters:'); shinyjs.debugMessage(params); shinyjs.click(params);});
+Shiny.addCustomMessageHandler('shinyjs-refresh', function(params) { shinyjs.debugMessage('shinyjs: calling function "refresh" with parameters:'); shinyjs.debugMessage(params); shinyjs.refresh(params);});</script>
+<script src="shinyjs/shinyjs-default-funcs.js"></script>
+<script>shinyjs.debug = false;</script>
+<style>.shinyjs-hide { display: none !important; }</style>
+<!--/SHINY.SINGLETON[223eed69850a44625b94f39193177e317dbc7f92]-->
+</div>
+</div>
+<div id="welcome" class="sd-page">
+<section id="welcome-to-our-survey" class="level1">
+<h1>Welcome to our survey!</h1>
+<section id="below-are-some-basic-questions-about-your-primary-vehicle" class="level2">
+<h2 class="anchored" data-anchor-id="below-are-some-basic-questions-about-your-primary-vehicle">Below are some basic questions about your primary vehicle</h2>
+<section id="please-answer-to-the-best-of-your-knowledge" class="level3">
+<h3 class="anchored" data-anchor-id="please-answer-to-the-best-of-your-knowledge">Please answer to the best of your knowledge</h3>
+<div class="cell">
+<div class="cell-output-display no-overflow-x">
+<div id="container- acquire_primary_vehicle" data-question-id="acquire_primary_vehicle" data-required="false" class="question-container">
+<div class="form-group shiny-input-container" style="width:100%;">
+<label class="control-label" id="acquire_primary_vehicle-label" for="acquire_primary_vehicle"><p>How did you buy your primary vehicle?</p>
+</label>
+<div>
+<select id="acquire_primary_vehicle" class="shiny-input-select"><option value="">Choose an option...</option>
+<option value="new">New</option>
+<option value="used_dealer">Used car from a dealer</option>
+<option value="used_informally">Used car informally</option>
+<option value="received_gift">Received as a gift</option>
+<option value="move_in_access">Via move-in with someone who has a car</option>
+<option value="do_not_remember">Do not remember or do not know</option></select>
+<script type="application/json" data-for="acquire_primary_vehicle">{"plugins":["selectize-plugin-a11y"]}</script>
+</div>
+</div>
+</div>
+</div>
+<div class="cell-output-display no-overflow-x">
+<div id="container- vehicle_leased" data-question-id="vehicle_leased" data-required="false" class="question-container">
+<div class="form-group shiny-input-container" style="width:100%;">
+<label class="control-label" id="vehicle_leased-label" for="vehicle_leased"><p>Is the vehicle leased?</p>
+</label>
+<div>
+<select id="vehicle_leased" class="shiny-input-select"><option value="">Choose an option...</option>
+<option value="yes">Yes</option>
+<option value="no">No</option>
+<option value="dont_know">Don't Know</option></select>
+<script type="application/json" data-for="vehicle_leased">{"plugins":["selectize-plugin-a11y"]}</script>
+</div>
+</div>
+</div>
+</div>
+<div class="cell-output-display no-overflow-x">
+<div id="container- vehicle_cost" data-question-id="vehicle_cost" data-required="false" class="question-container">
+<div class="form-group shiny-input-container" style="width:100%;">
+<label class="control-label" id="vehicle_cost-label" for="vehicle_cost"><p>How much did you pay for this vehicle, to your best estimate?</p>
+</label>
+<div>
+<select id="vehicle_cost" class="shiny-input-select"><option value="">Choose an option...</option>
+<option value="4999">$4,999 or less</option>
+<option value="9999">$5,000 - $9,999</option>
+<option value="14999">$10,000 - $14,999</option>
+<option value="19999">$15,000 - $19,999</option>
+<option value="24999">$20,000 - $24,999</option>
+<option value="29999">$25,000 - $29,999</option>
+<option value="34999">$30,000 - $34,999</option>
+<option value="39999">$35,000 - $39,999</option>
+<option value="44999">$40,000 - $44,999</option>
+<option value="49999">$45,000 - $49,999</option>
+<option value="59999">$50,000 - $59,999</option>
+<option value="69999">$60,000 - $69,999</option>
+<option value="79999">$70,000 - $79,999</option>
+<option value="89999">$80,000 - $89,999</option>
+<option value="99999">$90,000 - $99,999</option>
+<option value="100000">100,000 or more</option>
+<option value="do_not_remember">Do not remember or do not know</option></select>
+<script type="application/json" data-for="vehicle_cost">{"plugins":["selectize-plugin-a11y"]}</script>
+</div>
+</div>
+</div>
+</div>
+<div class="cell-output-display no-overflow-x">
+<div id="container- monthly_payment" data-question-id="monthly_payment" data-required="false" class="question-container">
+<div class="form-group shiny-input-container" style="width:100%;">
+<label class="control-label" id="monthly_payment-label" for="monthly_payment"><p>What is your monthly payment?</p>
+</label>
+<div>
+<select id="monthly_payment" class="shiny-input-select"><option value="">Choose an option...</option>
+<option value="0">Paid all cash/no loan</option>
+<option value="199">$100 - $199</option>
+<option value="299">$200 - $299</option>
+<option value="399">$300 - $399</option>
+<option value="499">$400 - $499</option>
+<option value="599">$500 - $599</option>
+<option value="699">$600 - $699</option>
+<option value="799">$700 - $799</option>
+<option value="899">$800 - $899</option>
+<option value="999">$900 - $999</option>
+<option value="1000">1,000 or more</option>
+<option value="do_not_remember">Do not remember or do not know</option></select>
+<script type="application/json" data-for="monthly_payment">{"plugins":["selectize-plugin-a11y"]}</script>
+</div>
+</div>
+</div>
+</div>
+<div class="cell-output-display no-overflow-x">
+<div id="container- gas_mileage" data-question-id="gas_mileage" data-required="false" class="question-container">
+<div class="form-group shiny-input-container" style="width:100%;">
+<label class="control-label" id="gas_mileage-label" for="gas_mileage"><p>What gas mileage does your vehicle give?</p>
+</label>
+<div>
+<select id="gas_mileage" class="shiny-input-select"><option value="">Choose an option...</option>
+<option value="0">0 - 9.99 mpg</option>
+<option value="10">10 - 19.99 mpg</option>
+<option value="20">20 - 29.99 mpg</option>
+<option value="30">30 - 39.99 mpg</option>
+<option value="40">40 - 49.99 mpg</option>
+<option value="50">50 - 59.99 mpg</option>
+<option value="60">60 mpg and above</option>
+<option value="not_applicable">not applicable</option></select>
+<script type="application/json" data-for="gas_mileage">{"plugins":["selectize-plugin-a11y"]}</script>
+</div>
+</div>
+</div>
+</div>
+<div class="cell-output-display no-overflow-x">
+<div id="container- refueling" data-question-id="refueling" data-required="false" class="question-container">
+<div class="form-group shiny-input-container" style="width:100%;">
+<label class="control-label" id="refueling-label" for="refueling"><p>How often do you refuel?</p>
+</label>
+<div>
+<select id="refueling" class="shiny-input-select"><option value="">Choose an option...</option>
+<option value="0">once a month</option>
+<option value="1">once in two weeks</option>
+<option value="2">once a week</option>
+<option value="3">twice a week</option>
+<option value="4">three times a week</option>
+<option value="5">four times a week</option>
+<option value="6">over four times a week</option></select>
+<script type="application/json" data-for="refueling">{"plugins":["selectize-plugin-a11y"]}</script>
+</div>
+</div>
+</div>
+</div>
+<div class="cell-output-display">
+<div id="container- car_types" data-question-id="car_types" data-required="false" class="question-container">
+<div id="car_types" style="width:100%;" class="form-group shiny-input-checkboxgroup shiny-input-container" role="group" aria-labelledby="car_types-label">
+<label class="control-label" id="car_types-label" for="car_types"><p>What type of cars do you have in your household? (Select all that apply)?</p>
+</label>
+<div class="shiny-options-group">
+<div class="checkbox">
+<label>
+<input type="checkbox" name="car_types" value="Gasoline">
+<span>Gasoline</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="car_types" value="hybrid">
+<span>Hybrid</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="car_types" value="plugin_hybrid">
+<span>Plug-in Hybrid</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="car_types" value="electric">
+<span>electric</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="car_types" value="other">
+<span>other</span>
+</label>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell-output-display">
+<div id="container- parking" data-question-id="parking" data-required="false" class="question-container">
+<div id="parking" style="width:100%;" class="form-group shiny-input-checkboxgroup shiny-input-container" role="group" aria-labelledby="parking-label">
+<label class="control-label" id="parking-label" for="parking"><p>Where can you park at home? (Select all that apply)?</p>
+</label>
+<div class="shiny-options-group">
+<div class="checkbox">
+<label>
+<input type="checkbox" name="parking" value="Street_Parking">
+<span>Street Parking</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="parking" value="Driveway_Carport">
+<span>Driveway/ Carport</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="parking" value="Single_family_garage">
+<span>Single-family garage</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="parking" value="Shared_parking_garage">
+<span>Shared parking garage</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="parking" value="prefer_not_to_say">
+<span>prefer not to say</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="parking" value="other">
+<span>other</span>
+</label>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell-output-display no-overflow-x">
+<div id="container- neighbor_ev_info" data-question-id="neighbor_ev_info" data-required="false" class="question-container">
+<div class="form-group shiny-input-container" style="width:100%;">
+<label class="control-label" id="neighbor_ev_info-label" for="neighbor_ev_info"><p>Do any of your neighbors own/lease a plug-in hybrid or pure electric vehicle (Select one)</p>
+</label>
+<div>
+<select id="neighbor_ev_info" class="shiny-input-select"><option value="">Choose an option...</option>
+<option value="yes">Yes</option>
+<option value="no">No</option>
+<option value="not_sure">I'm not sure</option></select>
+<script type="application/json" data-for="neighbor_ev_info">{"plugins":["selectize-plugin-a11y"]}</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><br></p>
+<p>You need to insert next buttons with <code>sd_next()</code> and set the <code>next_page</code> argument to the name of the page you want to go to next.</p>
+<div class="cell">
+<div class="cell-output-display">
+<button id="next-page2" type="button" class="btn btn-default action-button" style="display: block; margin: auto;" onclick="Shiny.setInputValue('next_page', 'page2');">Next</button>
+</div>
+</div>
+</section>
+</section>
+</section>
+</div>
+<div id="page2" class="sd-page">
+<section id="how-often-you-use-different-transportation-types-to-get-around." class="level2">
+<h2 class="anchored" data-anchor-id="how-often-you-use-different-transportation-types-to-get-around.">How often you use different transportation types to get around.</h2>
+<section id="please-answer-to-the-best-of-your-knowledge-and-note-that-this-does-not-include-travel-that-is-for-workfor-example-if-you-are-a-professional-chauffeur-driver-or-a-delivery-person" class="level3">
+<h3 class="anchored" data-anchor-id="please-answer-to-the-best-of-your-knowledge-and-note-that-this-does-not-include-travel-that-is-for-workfor-example-if-you-are-a-professional-chauffeur-driver-or-a-delivery-person">Please answer to the best of your knowledge and note that this does not include travel that is for work(for example, if you are a professional chauffeur, driver or a delivery person)</h3>
+<div class="cell">
+<div class="cell-output-display no-overflow-x">
+<div id="container- household_vehicle" data-question-id="household_vehicle" data-required="false" class="question-container">
+<div class="form-group shiny-input-container" style="width:100%;">
+<label class="control-label" id="household_vehicle-label" for="household_vehicle"><p>Your Household’s vehicle</p>
+</label>
+<div>
+<select id="household_vehicle" class="shiny-input-select"><option value="">Choose an option...</option>
+<option value="never">Less than once a month or never</option>
+<option value="once_month">About once a month</option>
+<option value="once_week">About once a week</option>
+<option value="2_3_week">2-3 times a week</option>
+<option value="4_5_week">4-5 times a week</option>
+<option value="once_day">Once a day or more</option></select>
+<script type="application/json" data-for="household_vehicle">{"plugins":["selectize-plugin-a11y"]}</script>
+</div>
+</div>
+</div>
+</div>
+<div class="cell-output-display no-overflow-x">
+<div id="container- Ride_friend" data-question-id="Ride_friend" data-required="false" class="question-container">
+<div class="form-group shiny-input-container" style="width:100%;">
+<label class="control-label" id="Ride_friend-label" for="Ride_friend"><p>Ride from a friend or family member or carpool</p>
+</label>
+<div>
+<select id="Ride_friend" class="shiny-input-select"><option value="">Choose an option...</option>
+<option value="never">Less than once a month or never</option>
+<option value="once_month">About once a month</option>
+<option value="once_week">About once a week</option>
+<option value="2_3_week">2-3 times a week</option>
+<option value="4_5_week">4-5 times a week</option>
+<option value="once_day">Once a day or more</option></select>
+<script type="application/json" data-for="Ride_friend">{"plugins":["selectize-plugin-a11y"]}</script>
+</div>
+</div>
+</div>
+</div>
+<div class="cell-output-display no-overflow-x">
+<div id="container- bicycle" data-question-id="bicycle" data-required="false" class="question-container">
+<div class="form-group shiny-input-container" style="width:100%;">
+<label class="control-label" id="bicycle-label" for="bicycle"><p>Walk, bicycle or your own motorcycle, scooter or moped</p>
+</label>
+<div>
+<select id="bicycle" class="shiny-input-select"><option value="">Choose an option...</option>
+<option value="never">Less than once a month or never</option>
+<option value="once_month">About once a month</option>
+<option value="once_week">About once a week</option>
+<option value="2_3_week">2-3 times a week</option>
+<option value="4_5_week">4-5 times a week</option>
+<option value="once_day">Once a day or more</option></select>
+<script type="application/json" data-for="bicycle">{"plugins":["selectize-plugin-a11y"]}</script>
+</div>
+</div>
+</div>
+</div>
+<div class="cell-output-display no-overflow-x">
+<div id="container- Taxi" data-question-id="Taxi" data-required="false" class="question-container">
+<div class="form-group shiny-input-container" style="width:100%;">
+<label class="control-label" id="Taxi-label" for="Taxi"><p>Taxi or Uber</p>
+</label>
+<div>
+<select id="Taxi" class="shiny-input-select"><option value="">Choose an option...</option>
+<option value="never">Less than once a month or never</option>
+<option value="once_month">About once a month</option>
+<option value="once_week">About once a week</option>
+<option value="2_3_week">2-3 times a week</option>
+<option value="4_5_week">4-5 times a week</option>
+<option value="once_day">Once a day or more</option></select>
+<script type="application/json" data-for="Taxi">{"plugins":["selectize-plugin-a11y"]}</script>
+</div>
+</div>
+</div>
+</div>
+<div class="cell-output-display no-overflow-x">
+<div id="container- Taxi" data-question-id="Taxi" data-required="false" class="question-container">
+<div class="form-group shiny-input-container" style="width:100%;">
+<label class="control-label" id="Taxi-label" for="Taxi"><p>Public transit (bus, streetcar, subway, metro, rapid transit)</p>
+</label>
+<div>
+<select id="Taxi" class="shiny-input-select"><option value="">Choose an option...</option>
+<option value="never">Less than once a month or never</option>
+<option value="once_month">About once a month</option>
+<option value="once_week">About once a week</option>
+<option value="2_3_week">2-3 times a week</option>
+<option value="4_5_week">4-5 times a week</option>
+<option value="once_day">Once a day or more</option></select>
+<script type="application/json" data-for="Taxi">{"plugins":["selectize-plugin-a11y"]}</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><br></p>
+<div class="cell">
+<div class="cell-output-display">
+<button id="next-page3" type="button" class="btn btn-default action-button" style="display: block; margin: auto;" onclick="Shiny.setInputValue('next_page', 'page3');">Next</button>
+</div>
+</div>
+</section>
+</section>
+</div>
+<div id="page3" class="sd-page">
+<section id="this-section-asks-a-few-questions-about-your-future-vehicle." class="level2">
+<h2 class="anchored" data-anchor-id="this-section-asks-a-few-questions-about-your-future-vehicle.">This section asks a few questions about your future vehicle.</h2>
+<div class="cell">
+<div class="cell-output-display no-overflow-x">
+<div id="container- next_vehicle_purchase" data-question-id="next_vehicle_purchase" data-required="false" class="question-container">
+<div class="form-group shiny-input-container" style="width:100%;">
+<label class="control-label" id="next_vehicle_purchase-label" for="next_vehicle_purchase"><p>To your best estimate, when will you likely need to purchase another vehicle?</p>
+</label>
+<div>
+<select id="next_vehicle_purchase" class="shiny-input-select"><option value="">Choose an option...</option>
+<option value="one_year">Within 1 year</option>
+<option value="two_years">1-2 years into the future</option>
+<option value="five_years">3-5 years into the future</option>
+<option value="nine_years">6-9 years into the future</option>
+<option value="ten_years">10+ years into the future</option>
+<option value="not_sure">I'm not sure</option></select>
+<script type="application/json" data-for="next_vehicle_purchase">{"plugins":["selectize-plugin-a11y"]}</script>
+</div>
+</div>
+</div>
+</div>
+<div class="cell-output-display">
+<div id="container- next_vehicle_type" data-question-id="next_vehicle_type" data-required="false" class="question-container">
+<div id="next_vehicle_type" style="width:100%;" class="form-group shiny-input-checkboxgroup shiny-input-container" role="group" aria-labelledby="next_vehicle_type-label">
+<label class="control-label" id="next_vehicle_type-label" for="next_vehicle_type"><p>For your next vehicle purchase, which type of vehicles would you consider (select ALL that apply)?</p>
+</label>
+<div class="shiny-options-group">
+<div class="checkbox">
+<label>
+<input type="checkbox" name="next_vehicle_type" value="Small_Sedan">
+<span>Small Sedan</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="next_vehicle_type" value="Large_Sedan">
+<span>Large Sedan</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="next_vehicle_type" value="Sports_Car">
+<span>Sports Car</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="next_vehicle_type" value="Compact_SUV">
+<span>Compact SUV</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="next_vehicle_type" value="Large_SUV">
+<span>Large SUV</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="next_vehicle_type" value="Van">
+<span>Van</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="next_vehicle_type" value="Pick-up_truck">
+<span>Pick-up truck</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="next_vehicle_type" value="Do_not_know">
+<span>Do not know</span>
+</label>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell-output-display no-overflow-x">
+<div id="container- which_market" data-question-id="which_market" data-required="false" class="question-container">
+<div class="form-group shiny-input-container" style="width:100%;">
+<label class="control-label" id="which_market-label" for="which_market"><p>Which market will you consider buying this vehicle from?</p>
+</label>
+<div>
+<select id="which_market" class="shiny-input-select"><option value="">Choose an option...</option>
+<option value="New">New</option>
+<option value="Used">Used</option>
+<option value="Both">Both</option>
+<option value="I'm not sure">I'm not sure</option></select>
+<script type="application/json" data-for="which_market">{"plugins":["selectize-plugin-a11y"]}</script>
+</div>
+</div>
+</div>
+</div>
+<div class="cell-output-display no-overflow-x">
+<div id="container- plan_lease_buy" data-question-id="plan_lease_buy" data-required="false" class="question-container">
+<div class="form-group shiny-input-container" style="width:100%;">
+<label class="control-label" id="plan_lease_buy-label" for="plan_lease_buy"><p>Will you plan to lease or buy?</p>
+</label>
+<div>
+<select id="plan_lease_buy" class="shiny-input-select"><option value="">Choose an option...</option>
+<option value="Lease">Lease</option>
+<option value="Purchase">Purchase</option>
+<option value="I'm not sure">I'm not sure</option></select>
+<script type="application/json" data-for="plan_lease_buy">{"plugins":["selectize-plugin-a11y"]}</script>
+</div>
+</div>
+</div>
+</div>
+<div class="cell-output-display">
+<div id="container- next_car_budget_range" data-question-id="next_car_budget_range" data-required="false" class="question-container">
+<div id="next_car_budget_range" style="width:100%;" class="form-group shiny-input-checkboxgroup shiny-input-container" role="group" aria-labelledby="next_car_budget_range-label">
+<label class="control-label" id="next_car_budget_range-label" for="next_car_budget_range"><p>What is your budget range for this next vehicle purchase (select ALL that apply)?</p>
+</label>
+<div class="shiny-options-group">
+<div class="checkbox">
+<label>
+<input type="checkbox" name="next_car_budget_range" value="4999">
+<span>$4,999 or less</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="next_car_budget_range" value="9999">
+<span>$5,000 - $9,999</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="next_car_budget_range" value="14999">
+<span>$10,000 - $14,999</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="next_car_budget_range" value="19999">
+<span>$15,000 - $19,999</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="next_car_budget_range" value="24999">
+<span>$20,000 - $24,999</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="next_car_budget_range" value="29999">
+<span>$25,000 - $29,999</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="next_car_budget_range" value="34999">
+<span>$30,000 - $34,999</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="next_car_budget_range" value="39999">
+<span>$35,000 - $39,999</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="next_car_budget_range" value="44999">
+<span>$40,000 - $44,999</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="next_car_budget_range" value="49999">
+<span>$45,000 - $49,999</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="next_car_budget_range" value="59999">
+<span>$50,000 - $59,999</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="next_car_budget_range" value="69999">
+<span>$60,000 - $69,999</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="next_car_budget_range" value="79999">
+<span>$70,000 - $79,999</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="next_car_budget_range" value="89999">
+<span>$80,000 - $89,999</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="next_car_budget_range" value="99999">
+<span>$90,000 - $99,999</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="next_car_budget_range" value="100000">
+<span>100,000 or more</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="next_car_budget_range" value="not_sure">
+<span>I'm not sure</span>
+</label>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell-output-display no-overflow-x">
+<div id="container- next_car_down_payment" data-question-id="next_car_down_payment" data-required="false" class="question-container">
+<div class="form-group shiny-input-container" style="width:100%;">
+<label class="control-label" id="next_car_down_payment-label" for="next_car_down_payment"><p>What will be your down payment for your next car?</p>
+</label>
+<div>
+<select id="next_car_down_payment" class="shiny-input-select"><option value="">Choose an option...</option>
+<option value="999">$0 - $999</option>
+<option value="1,999">$1,000 - $1,999</option>
+<option value="2,999">$2,000 - $2,999</option>
+<option value="3,999">$3,000 - $3,999</option>
+<option value="4,999">$4,000 - $4,999</option>
+<option value="5,999">$5,000 - $5,999</option>
+<option value="6,999">$6,000 - $6,999</option>
+<option value="7,999">$7,000 - $7,999</option>
+<option value="8,999">$8,000 - $8,999</option>
+<option value="9,999">$9,000 - $9,999</option>
+<option value="10,999">$10,000 - $10,999</option>
+<option value="11,999">$11,000 - $11,999</option>
+<option value="12,999">$12,000 - $12,999</option>
+<option value="13,999">$13,000 - $13,999</option>
+<option value="14,999">$14,000 - $14,999</option>
+<option value="15,999">$15,000 - $15,999</option>
+<option value="16,999">$16,000 - $16,999</option>
+<option value="17,999">$17,000 - $17,999</option>
+<option value="18,999">$18,000 - $18,999</option>
+<option value="19,999">$19,000 - $19,999</option>
+<option value="20,000">20,000 or more</option>
+<option value="not_sure">I'm not sure</option></select>
+<script type="application/json" data-for="next_car_down_payment">{"plugins":["selectize-plugin-a11y"]}</script>
+</div>
+</div>
+</div>
+</div>
+<div class="cell-output-display no-overflow-x">
+<div id="container- plan_lease_buy" data-question-id="plan_lease_buy" data-required="false" class="question-container">
+<div class="form-group shiny-input-container" style="width:100%;">
+<label class="control-label" id="plan_lease_buy-label" for="plan_lease_buy"><p>Would you consider a Plug-in Hybrid Electric or an all-electric vehicle as your next vehicle?</p>
+</label>
+<div>
+<select id="plan_lease_buy" class="shiny-input-select"><option value="">Choose an option...</option>
+<option value="Definitely_Not">Definitely Not</option>
+<option value="Probably_Not">Probably Not</option>
+<option value="Maybe_Not_sure">Maybe/ Not sure</option>
+<option value="Probably_Yes">Probably Yes</option>
+<option value="Definitely_Yes">Definitely Yes</option></select>
+<script type="application/json" data-for="plan_lease_buy">{"plugins":["selectize-plugin-a11y"]}</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><br></p>
+<div class="cell">
+<div class="cell-output-display">
+<button id="next-end" type="button" class="btn btn-default action-button" style="display: block; margin: auto;" onclick="Shiny.setInputValue('next_page', 'end');">Next</button>
+</div>
+</div>
+</section>
+</div>
+<div id="end" class="sd-page">
+<p>This it the last page in the survey</p>
+</div>
+<p>
+<script type="application/shiny-prerendered" data-context="server-start">
+# Run this in your Console to install the R package:
+# remotes::install_github("jhelvy/surveydown")
+
+# If you do not see the extension in the project directory in
+# _extensions/surveydown, you can install the extension by running this
+# in your Terminal:
+# quarto install extension jhelvy/surveydown-ext
+
+# Load the package
+library(surveydown)
+
+# Run initial setup function (essential - do not delete)
+sd_setup()
+</script>
+ 
+<script type="application/shiny-prerendered" data-context="server">
+# surveydown stores data on a database that you define at https://supabase.com/
+# To connect to a database to store the survey data, update this with details
+# from your supabase account and database. See documentation for details.
+# For security, we recommend storing your supabase password in your R
+# environment instead of hard-coding it here, which you can open and edit with
+# usethis::edit_r_environ()
+
+# db <- sd_database(
+#   host       = "",
+#   db_name    = "",
+#   port       = "",
+#   user       = "",
+#   table_name = "",
+#   password   = Sys.getenv("SUPABASE_PASSWORD")
+# )
+
+# If you don't have a database setup you can just leave the function blank.
+# When testing without a database connected, a data.csv file will be
+# written to the project directory so you can preview the response data.
+
+db <- sd_database()
+
+# Use the sd_config() function to customize features in your survey, like
+# logic to conditionally display questions or skip to pages based on
+# responses to skip other questions in your survey. See documentation for
+# details. For this simple survey, we'll just leave this function blank.
+
+config <- sd_config()
+
+# The sd_server function initiates your survey - don't change this
+
+sd_server(
+  input   = input,
+  session = session,
+  config  = config,
+  db      = db
+)
+</script>
+ 
+<script type="application/shiny-prerendered" data-context="server-extras">
+ojs_define <- function(..., .session = shiny::getDefaultReactiveDomain()) {
+  quos <- rlang::enquos(...)
+  vars <- rlang::list2(...)
+  nm <- names(vars)
+  if (is.null(nm)) {
+    nm <- rep_len("", length(vars))
+  }
+  mapply(function(q, nm, val) {
+    # Infer name, if possible
+    if (nm == "") {
+      tryCatch({
+        nm <- rlang::as_name(q)
+      }, error = function(e) {
+        code <- paste(collapse = "\n", deparse(rlang::f_rhs(q)))
+        stop("ojs_define() could not create a name for the argument: ", code)
+      })
+    }
+    .session$output[[nm]] <- val
+    outputOptions(.session$output, nm, suspendWhenHidden = FALSE)
+    .session$sendCustomMessage("ojs-export", list(name = nm))
+    NULL
+  }, quos, nm, vars, SIMPLIFY = FALSE, USE.NAMES = FALSE)
+  invisible()
+}
+</script>
+</p>
+<!--html_preserve-->
+<script type="application/shiny-prerendered" data-context="dependencies">
+{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["selectize"]},{"type":"character","attributes":{},"value":["0.15.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["www/shared/selectize"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/selectize.min.js","accessibility/js/selectize-plugin-a11y.min.js"]},{"type":"character","attributes":{},"value":["css/selectize.bootstrap3.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["shiny"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.9.1"]}]}]}
+</script>
+<!--/html_preserve-->
+<!--html_preserve-->
+
+<script type="application/shiny-prerendered" data-context="execution_dependencies">
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["packages"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["packages","version"]},"class":{"type":"character","attributes":{},"value":["data.frame"]},"row.names":{"type":"integer","attributes":{},"value":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41]}},"value":[{"type":"character","attributes":{},"value":["base","bslib","cachem","cli","commonmark","compiler","datasets","digest","evaluate","fastmap","graphics","grDevices","htmltools","htmlwidgets","httpuv","jquerylib","jsonlite","knitr","later","lifecycle","magrittr","markdown","memoise","methods","mime","promises","R6","Rcpp","rlang","rmarkdown","rstudioapi","sass","shiny","shinyjs","stats","surveydown","tools","utils","xfun","xtable","yaml"]},{"type":"character","attributes":{},"value":["4.3.1","0.8.0","1.1.0","3.6.3","1.9.1","4.3.1","4.3.1","0.6.36","0.23","1.2.0","4.3.1","4.3.1","0.5.8.1","1.6.2","1.6.15","0.1.4","1.8.8","1.45","1.3.2","1.0.4","2.0.3","1.13","2.0.1","4.3.1","0.12","1.3.0","2.5.1","1.0.13","1.1.4","2.25","0.16.0","0.4.9","1.9.1","2.1.0","4.3.1","0.0.5","4.3.1","4.3.1","0.46","1.8-4","2.3.10"]}]}]}
+</script>
+<!--/html_preserve-->
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
