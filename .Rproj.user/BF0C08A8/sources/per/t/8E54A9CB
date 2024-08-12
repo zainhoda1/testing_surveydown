@@ -3,7 +3,7 @@
     "path": "D:/Github/testing_surveydown/test1/example.qmd",
     "project_path": "test1/example.qmd",
     "type": "quarto_markdown",
-    "hash": "0",
+    "hash": "1088399087",
     "contents": "",
     "dirty": false,
     "created": 1723141637009.0,
@@ -12,8 +12,8 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "600,0",
-        "scrollLine": "593"
+        "cursorPosition": "35,0",
+        "scrollLine": "22"
     },
     "folds": "36|6|183|0|\n201|6|275|0|\n291|6|422|0|\n437|6|570|0|\n605|6|804|0|\n822|6|862|0|\n",
     "lastKnownWriteTime": 1723152660,
