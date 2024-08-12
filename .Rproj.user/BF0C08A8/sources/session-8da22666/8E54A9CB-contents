@@ -72,7 +72,7 @@ html_buttons_option <- c("option_1", "option_2", "option_3")
 
 
 names(html_buttons_option)[1] <- glue("**Option 1**<br>
-    <img src='https://raw.githubusercontent.com/jhelvy/formr4conjoint/master/survey/images/fuji.jpg' width=100><br>
+    <img src='https://https://raw.githubusercontent.com/zainhoda1/testing_surveydown/main/test1/figs/dallE_car_image.webp?token=GHSAT0AAAAAACVP5YGRGOBWM5APQJCB4RV6ZV2MMMA' width=80><br>
     **Vehicle Type**:  {alt1$powertrain} <br>   
     **Range(in miles)**: {alt1$range} <br>
     **Purchase Price**: {alt1$price} <br>
