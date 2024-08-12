@@ -9,7 +9,7 @@ library(here)
 # Define profiles with attributes and levels
 profiles <- cbc_profiles(
   price       = c(5,7.5,10,12.5,15,17.5,20),   # Price ($1,000)
-  mileage = c(0-10, 10-20, 20-30, 30-40, 40-50, 50-60, 60-70, 70-80, 80-90, 90-100, 100-150 ),   # mileage in 1000 miles interval
+  mileage = c(0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 ),   # mileage in 1000 miles interval
   accelTime   = c(6, 7, 8,9),      # 0-60 mph acceleration time (s)
   powertrain  = c("Gasoline", "Electric", "Plug-in Hybrid"), 
   range       = c(100, 150, 200, 250, 300, 350), # EV driving range

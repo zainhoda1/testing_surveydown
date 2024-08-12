@@ -24,6 +24,93 @@ library(surveydown)
 sd_setup()
 ```
 
+```{r}
+library(cbcTools)
+library(fastDummies)
+library(tidyverse)
+library(here)
+library(dplyr)
+library(tidyverse)
+library(glue)
+```
+
+::: {#page5 .sd-page}
+
+## Conjoint Questions
+
+```{r}
+
+
+
+survey <- read_csv(here('data', 'survey.csv'))
+
+respondentID  <-sample(survey$respID, 1)
+
+
+df<- survey %>% filter(respID == respondentID)
+
+df_json <- jsonlite::serializeJSON(df)
+
+
+alts <- jsonlite::unserializeJSON(df_json) %>% 
+  filter(qID == 1)
+alt1 <- alts %>% filter(altID == 1)
+alt2 <- alts %>% filter(altID == 2)
+alt3 <- alts %>% filter(altID == 3)
+
+type<- alt1$powertrain
+price <- alt1$price
+acceltime <- alt1$accelTime
+
+
+
+# Define the option vector
+html_buttons_option <- c("option_1", "option_2", "option_3")
+
+# Change the names of each element to display markdown-formatted text 
+# and an embedded image using html
+
+
+names(html_buttons_option)[1] <- glue("**Option 1**<br>
+    <img src='https://raw.githubusercontent.com/jhelvy/formr4conjoint/master/survey/images/fuji.jpg' width=100><br>
+    **Vehicle Type**:  {alt1$powertrain} <br>   
+    **Range(in miles)**: {alt1$range} <br>
+    **Purchase Price**: {alt1$price} <br>
+    **Operating Cost**:  {alt1$operating_cost} <br>   
+    **Equivalent Gasoline Efficiency**: {alt1$gas_efficiency} <br>
+    **0 to 60 acceleration time**: {alt1$accelTime} <br>
+    **Mileage on the vehicle (thousands of miles)**: {alt1$mileage} "
+)
+names(html_buttons_option)[2] <- "**Option 2**<br>
+    <img src='https://raw.githubusercontent.com/jhelvy/formr4conjoint/master/survey/images/pinkLady.jpg' width=100><br>
+    **Type**: Pink Lady<br>
+    **Price**: $ 1.5 / lb<br>
+    **Freshness**: Excellent"
+names(html_buttons_option)[3] <- "**Option 3**<br>
+    <img src='https://raw.githubusercontent.com/jhelvy/formr4conjoint/master/survey/images/honeycrisp.jpg' width=100><br>
+    **Type**: Honeycrisp<br>
+    **Price**: $ 2 / lb<br>
+    **Freshness**: Poor"
+
+sd_question(
+  type   = 'mc_buttons',
+  id     = 'html_buttons',
+  label  = "A sample survey question using mc_buttons`",
+  option = html_buttons_option
+)
+
+
+```
+
+<br>
+
+```{r}
+sd_next(next_page = 'page6')
+```
+
+::: 
+
+
 ::: {#welcome .sd-page}
 
 # Welcome to our survey!
@@ -188,7 +275,7 @@ sd_question(
 
 
 ```{r}
-sd_next(next_page = 'page2')
+sd_next(next_page = 'page5')
 ```
 
 :::
@@ -579,25 +666,7 @@ sd_next(next_page = 'page5')
 
 :::
 
-::: {#page5 .sd-page}
 
-## Conjoint Questions
-
-```{r}
-sd_question(
-  type  = "textarea",
-  id    = "silly_paragraph",
-  label = "This is a test question"
-)
-```
-
-<br>
-
-```{r}
-sd_next(next_page = 'page6')
-```
-
-::: 
 
 ::: {#page6 .sd-page}
 
