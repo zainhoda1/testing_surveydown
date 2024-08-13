@@ -3,7 +3,7 @@
     "path": "D:/Github/testing_surveydown/test1/example.qmd",
     "project_path": "test1/example.qmd",
     "type": "quarto_markdown",
-    "hash": "383630040",
+    "hash": "3105761131",
     "contents": "",
     "dirty": false,
     "created": 1723141637009.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "74,180",
+        "cursorPosition": "124,0",
         "scrollLine": "65"
     },
-    "folds": "123|6|270|0|\n288|6|362|0|\n378|6|509|0|\n524|6|657|0|\n674|6|873|0|\n891|6|931|0|\n",
-    "lastKnownWriteTime": 1723491254,
+    "folds": "140|6|287|0|\n305|6|379|0|\n395|6|526|0|\n541|6|674|0|\n691|6|890|0|\n908|6|948|0|\n",
+    "lastKnownWriteTime": 1723527811,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1723491254906,
+    "last_content_update": 1723570071045,
     "read_only": false,
     "read_only_alternatives": []
 }
