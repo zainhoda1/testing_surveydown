@@ -1,0 +1,27 @@
+{
+    "id": "4B8CA802",
+    "path": "D:/Github/testing_surveydown/ui1.R",
+    "project_path": "ui1.R",
+    "type": "r_source",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1723828656117.0,
+    "source_on_save": false,
+    "relative_order": 2,
+    "properties": {
+        "tempName": "Untitled1",
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "356,1",
+        "scrollLine": "0"
+    },
+    "folds": "63|3|234|0|\n73|26|86|2|\n86|28|96|2|\n96|37|106|2|\n106|36|117|2|\n117|45|129|2|\n129|30|138|2|\n138|34|152|2|\n161|32|184|2|\n202|35|220|2|\n288|55|299|0|\n289|27|291|2|\n310|44|312|0|\n323|37|356|0|\n",
+    "lastKnownWriteTime": 1723830606,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1723830606940,
+    "read_only": false,
+    "read_only_alternatives": []
+}

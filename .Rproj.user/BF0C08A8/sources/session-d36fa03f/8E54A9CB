@@ -1,0 +1,32 @@
+{
+    "id": "8E54A9CB",
+    "path": "D:/Github/testing_surveydown/test1/DAC_Conjoint.qmd",
+    "project_path": "test1/DAC_Conjoint.qmd",
+    "type": "quarto_markdown",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1723141637009.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "78,34",
+        "scrollLine": "0",
+        "rmdVisualMode": "false",
+        "rmdVisualCollapsedChunks": "",
+        "rmdVisualModeLocation": "1193:545.4545288085938",
+        "rmdVisualWrapConfigured": "true",
+        "docOutlineVisible": "0",
+        "docOutlineSize": "170"
+    },
+    "folds": "10|6|32|0|\n133|6|280|0|\n380|6|511|0|\n523|6|656|0|\n674|6|682|0|\n696|6|746|0|\n828|6|877|0|\n893|6|942|0|\n958|6|1007|0|\n1023|6|1072|0|\n1088|6|1287|0|\n1300|6|1340|0|\n",
+    "lastKnownWriteTime": 1723831449,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1723831495460,
+    "read_only": false,
+    "read_only_alternatives": []
+}
